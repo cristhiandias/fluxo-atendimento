@@ -1,6 +1,7 @@
 <fieldset>
   <legend>Tipo de pessoa</legend>
-  <label><input type ="radio" name="rdoTipoPessoa"/>Física</label>
-  <label><input type ="radio" name="rdoTipoPessoa"/>Jurídica</label>
-  <label><input type ="radio" name="rdoTipoPessoa"/>Outros</label>
+  <label><input type ="radio" name="rdoTipoPessoa" (click)="alterarValor('F')"/>Física</label>
+  <label><input type ="radio" name="rdoTipoPessoa" (click)="alterarValor('J')"/>Jurídica</label>
+  <label><input type ="radio" name="rdoTipoPessoa" (click)="alterarValor('O')"/>Outros</label>
 </fieldset>
+{{tipoPessoa}}

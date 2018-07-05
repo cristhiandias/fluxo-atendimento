@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { TipoPessoa } from '../tipo-pessoa';
 
 @Component({
   selector: 'app-tipo-pessoa',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tipo-pessoa.component.css']
 })
 export class TipoPessoaComponent implements OnInit {
+
+  @Input() tipoPessoa : TipoPessoa;
+  @Output() tipoPessoaChange : EventEmitter<TipoPessoa> = new EventEmitter<TipoPessoa>();
+
+  alterarValor(tipoSelecionado :TipoPessoa){
+    this.tipoPessoaChange.emit(tipoSelecionado);
+  }
 
   constructor() { }
 
